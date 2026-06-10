@@ -1,0 +1,30 @@
+{
+  "pluginAlias": "NukiBle",
+  "pluginType": "platform",
+  "singular": false,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": { "title": "Platform Name", "type": "string", "default": "Nuki BLE" },
+      "pythonBin": { "title": "Python binary", "type": "string", "default": "python3" },
+      "pollIntervalSeconds": { "title": "Poll interval (seconds)", "type": "integer", "default": 60, "minimum": 10 },
+      "devices": {
+        "title": "Nuki devices",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": { "title": "Device name", "type": "string" },
+            "address": { "title": "BLE MAC address", "type": "string" },
+            "credentialsFile": { "title": "Credentials file path", "type": "string" },
+            "enableUnlatch": { "title": "Enable Unlatch switch", "type": "boolean", "default": true },
+            "enableCalibrate": { "title": "Enable Calibrate switch", "type": "boolean", "default": false },
+            "detachedCylinder": { "title": "Detached cylinder mode", "type": "boolean", "default": false, "description": "Enable if inner handle does not move synchronously with the outer key (priority cylinder)." }
+          },
+          "required": ["name", "address"]
+        }
+      }
+    },
+    "required": ["devices"]
+  }
+}

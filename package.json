@@ -1,0 +1,44 @@
+{
+  "name": "homebridge-nuki-ble",
+  "version": "0.1.0",
+  "description": "Homebridge plugin for Nuki Smart Locks via direct Bluetooth BLE — supports Lock, Unlock, Unlatch, Calibration and Advanced Config",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "homebridge",
+    "nuki",
+    "ble",
+    "bluetooth",
+    "smart-lock"
+  ],
+  "author": "StefanPeetz",
+  "license": "MIT",
+  "homepage": "https://github.com/StefanPeetz/homebridge-nuki-ble#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StefanPeetz/homebridge-nuki-ble.git"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "homebridge": ">=1.6.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "homebridge": "^2.1.0",
+    "typescript": "^5.4.0"
+  },
+  "peerDependencies": {
+    "homebridge": "^1.6.0 || ^2.0.0"
+  }
+}
